@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<title>ACTIVITY</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="stopwatch3.css" rel="stylesheet">
+    <script src="stopwatch.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="activity2.css">
+        <link rel="stylesheet" href="popup.css">
+    
+    
+    
+     
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+    background-color: 
+  background-position: center;
+  background-size: cover;
+  background-image: url(background.png);
+  min-height: 100%;
+}
+#logo {
+  display: inline-block;
+  margin: 10px; 
+  float: left;
+  height: 30px;
+  width: auto; 
+    border-radius: 0%;
+    }
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.imageContainer {
+    float: left;
+    transform: translate(170%,250%);
+    margin-right: 5px;
+    }
+    
+.button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 12.5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+    position: absolute;
+    top: 34.24%;
+    left: 42%;
+    width: 6.8%;
+    }
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html"><img id="logo" src="logo%20(1).png"></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Home</a>
+     <a href="Survive.html" class="w3-bar-item w3-button"> Survival Facts</a>
+      <a href="MyEscapes.html" class="w3-bar-item w3-button">My Escapes</a>
+      <a href="GreatestWarriors.html" class="w3-bar-item w3-button"> Greatest Warriors</a>
+      <a href="armour.html" class="w3-bar-item w3-button"> Armory</a>
+      <a href="login.html" class="w3-bar-item w3-button w3-border w3-border-orange w3-round-xxlarge"><i class="fa fa-sign-out"></i> LOGOUT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">SURVIVAL FACTS</a>
+  <a href="GreatestWarriors.html" onclick="w3_close()" class="w3-bar-item w3-button">GREATEST WARRIORS</a>
+  <a href="armour.html" onclick="w3_close()" class="w3-bar-item w3-button">ARMORY</a>
+  <a href="MyEscapes.html" onclick="w3_close()" class="w3-bar-item w3-button">MY ESCAPES</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGOUT</a>
+</nav>
+
+
+<!-- Header with full-height image -->
+
+<div id="stopwatch">
+      <!-- [DISPLAY TIMER] -->
+      <div id="sw-time">00:00:00</div>
+      <!-- [RESET BUTTON] -->
+      <input type="button" value="Reset" id="sw-rst" disabled/>
+      <!-- [START/STOP BUTTON] -->
+      <input type="button" value="Start Your Day" id="sw-go" disabled/>
+    </div>
+    <div class="row" style="position: absolute; top: 45%; left: 39.5%;">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" style="background-color: grey;">Jump the timer ahead by 54 minutes</button>
+            </div>
+        </div>
+<a href="activity4.html" class="button">End Day</a>
+
+   <div class="modal fade" id="demoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">It is coming to get you...<br>Escape by locking your screen for at least 15 mins</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-info" role="button">00:54:05</a>
+                    <button type="button" onclick="togglePopup()" data-dismiss="modal">Lock Screen Now</button>
+                    <button type="button" onclick="togglePopup()" data-dismiss="modal">Lock Screen 15 mins late</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-screen hidden flex-container-center">
+  <h2 >Screen is Locked</h2>
+  <a href="activity4.html" button onclick="togglePopup()" style="background-color: orangered; color: black; border: 2px solid #fff; font-size: 20px;">Unlock</button></a>
+</div>
+
+<div id="main">
+    <div id="pop-up">
+        <p>You were not fast enough and <br> lost some blood in the fight...</p>
+        
+        <a href="activity4.html" button id="close-btn" style="background-color: orangered; color: black; border: 5px solid #fff;">Got It</button></a>
+        
+        
+        
+    </div>
+    
+    
+    
+</div>
+
+
+
+<script src="activity2.js"></script>
+
+    <div class="image123">
+    <div class="imageContainer">
+        <img src="count100.png" height="200" width="200" />
+        
+    </div>
+    <div class="imageContainer">
+        <img class="middle-img" src="below75..png"/ height="200" width="200" />
+        
+    </div>
+    <div class="imageContainer">    
+        <img src="score2.PNG"/ height="200" width="230"/>
+        
+    </div>
+</div>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="custom.js"></script>
+
+</body>
+</html>

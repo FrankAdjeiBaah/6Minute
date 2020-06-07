@@ -1,0 +1,71 @@
+/**
+ * index.css
+ * Paul Krishnamurthy 2016
+ *
+ * https://paulkr.com
+ * paul@paulkr.com
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+h1, h2, p {
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 100%;
+  text-align: center;
+  color: #F07818;
+  
+  
+  padding: 30px;
+}
+
+h2 {
+  font-size: 200px;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+  color: #F0A830;
+  
+}
+
+span {
+  font-weight: lighter;
+}
+
+p {
+  color: #F0A830;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.pos-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-img {
+  width: 800px;
+  height: 600px;
+  border-radius: 5px;
+}
+
+.descrip {
+  font-size: 15px;
+  line-height: 0;
+  color: #D66A00;
+}
+
+.code-view {
+  width: 245px;
+  font-size: 14px;
+}

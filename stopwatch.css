@@ -1,0 +1,40 @@
+
+#stopwatch {
+  width: 350px;
+  padding: 40px;
+  position: absolute;
+  top: 35%;
+  left: 80%;
+  transform: translate(-50%,-50%);
+  background: #;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+
+      
+   
+}
+#sw-time {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+    color: white;
+}
+#sw-rst {
+  width: 30%;
+  box-sizing: padding-box;
+  padding: 1px;
+  display: inline-block;
+  background: orange;
+  border: 0;
+  color: #fff;
+}
+#sw-go {
+    width: 45%;
+  box-sizing: padding-box;
+  padding: 10px;
+  display: inline-block;
+  background: orange;
+  border: 0;
+  color: #fff;
+}
